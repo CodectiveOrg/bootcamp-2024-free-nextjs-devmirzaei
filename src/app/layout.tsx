@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
-import { Vazirmatn } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Vazirmatn } from "next/font/google";
+import "./globals.css";
 
 const vazirmatn = Vazirmatn({
-  subsets: ['latin', 'arabic'],
-  display: 'swap',
+  subsets: ["latin", "arabic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: 'نوبت‌دهی آنلاین دکتر',
-  description: 'رزور وقت دکتر به صورت آنلاین',
+  title: "نوبت‌دهی آنلاین دکتر",
+  description: "رزور وقت دکتر به صورت آنلاین",
 };
 
 export default function RootLayout({
