@@ -5,6 +5,7 @@ import HeaderComponent from "@/components/header/header.component";
 import FooterComponent from "@/components/footer/footer.component";
 
 import "./globals.css";
+import { ReactElement } from "react";
 
 const vazirmatn = Vazirmatn({
   subsets: ["latin", "arabic"],
@@ -20,7 +21,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): ReactElement {
   return (
     <html lang="fa" dir="rtl" className={vazirmatn.className}>
       <body>
