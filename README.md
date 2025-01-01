@@ -1,5 +1,7 @@
 # Doctor Booking App
 
+Visit [Demo](https://doctor-booking-domain.vercel.app/) on Vercel.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
