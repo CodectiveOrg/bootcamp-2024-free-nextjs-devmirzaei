@@ -11,7 +11,7 @@ export default function Home(): ReactElement {
     <div className={styles.home}>
       <h1>
         <HelloDoctorLogo />
-        سلام دکتر
+        نمایش دمو
       </h1>
       <GlobalSearchBoxComponent />
       <div className={styles.history}>
