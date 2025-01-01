@@ -1,30 +1,26 @@
-type Post = {
-  id: number;
-  title: string;
-};
+import { ReactElement } from "react";
 
-export default async function Home() {
-  const res = await fetch('https://jsonplaceholder.org/posts', {
-    cache: 'no-store',
-  });
+import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
 
-  const posts: Post[] = await res.json();
+import HelloDoctorLogo from "@/logo/hello-doctor-logo";
 
+import styles from "./page.module.css";
+
+export default function Home(): ReactElement {
   return (
-    <section>
-      <h1>سلام دکتر!</h1>
-      <p>
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-        از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-        سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
-        متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه
-        درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
-      </p>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
-    </section>
+    <div className={styles.home}>
+      <h1>
+        <HelloDoctorLogo />
+        سلام دکتر
+      </h1>
+      <GlobalSearchBoxComponent />
+      <div className={styles.history}>
+        <div className={styles.title}>آخرین جستجوهای شما</div>
+        <ul>
+          <li>ارتوپد</li>
+          <li>قلب و عروق</li>
+        </ul>
+      </div>
+    </div>
   );
 }
